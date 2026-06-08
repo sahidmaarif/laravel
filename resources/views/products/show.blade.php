@@ -27,6 +27,14 @@
             <div class="card-body">
                 <h5 class="card-title">Product Details</h5>
                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Category:</strong>
+                        @if($product->category)
+                            <span class="badge bg-info ms-2">{{ $product->category->name }}</span>
+                        @else
+                            <span class="badge bg-secondary ms-2">No Category</span>
+                        @endif
+                    </li>
                     <li class="list-group-item"><strong>ID:</strong> {{ $product->id }}</li>
                     <li class="list-group-item"><strong>Created:</strong> {{ $product->created_at->format('F j, Y') }}</li>
                     <li class="list-group-item"><strong>Updated:</strong> {{ $product->updated_at->format('F j, Y') }}</li>

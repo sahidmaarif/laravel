@@ -5,181 +5,119 @@
 @section('content')
     {{-- Page Header --}}
     <div class="mb-5">
-        <h1 class="display-5 fw-bold mb-2">Our Products</h1>
-        <p class="text-muted">
-            Browse our collection of quality products. Add items to your cart and proceed to checkout.
-        </p>
-    </div>
-    
-    {{-- Products Grid --}}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-        
-        {{-- Product 1: Wireless Headphones --}}
-        <div class="col">
-            <div class="card product-card">
-                {{-- Product Image --}}
-                <div class="product-image">
-                    <i class="bi bi-headphones"></i>
-                </div>
-                
-                {{-- Product Body --}}
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Wireless Headphones</h5>
-                    <p class="card-text text-muted small">
-                        Premium sound quality with active noise cancellation. Perfect for music and calls.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$79.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                
-                {{-- Product Footer --}}
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="display-5 fw-bold mb-2">Our Products</h1>
+                <p class="text-muted">
+                    Browse our collection of quality products. Add items to your cart and proceed to checkout.
+                </p>
             </div>
-        </div>
-        
-        {{-- Product 2: Portable Speaker --}}
-        <div class="col">
-            <div class="card product-card">
-                <div class="product-image">
-                    <i class="bi bi-speaker"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Portable Speaker</h5>
-                    <p class="card-text text-muted small">
-                        Compact and powerful speaker with 12-hour battery life. Great for outdoor adventures.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$49.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        {{-- Product 3: Smartphone Stand --}}
-        <div class="col">
-            <div class="card product-card">
-                <div class="product-image">
-                    <i class="bi bi-phone"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Smartphone Stand</h5>
-                    <p class="card-text text-muted small">
-                        Adjustable stand for all smartphones. Ideal for streaming and video calls.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$19.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        {{-- Product 4: USB Cable --}}
-        <div class="col">
-            <div class="card product-card">
-                <div class="product-image">
-                    <i class="bi bi-lightning-charge"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Premium USB Cable</h5>
-                    <p class="card-text text-muted small">
-                        Durable USB-C cable with fast charging capability. 2-meter length for convenience.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$12.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        {{-- Product 5: Wireless Charger --}}
-        <div class="col">
-            <div class="card product-card">
-                <div class="product-image">
-                    <i class="bi bi-battery-charging"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Wireless Charger</h5>
-                    <p class="card-text text-muted small">
-                        Fast wireless charging pad compatible with all Qi-enabled devices.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$34.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        {{-- Product 6: Screen Protector --}}
-        <div class="col">
-            <div class="card product-card">
-                <div class="product-image">
-                    <i class="bi bi-shield-exclamation"></i>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">Screen Protector (3 Pack)</h5>
-                    <p class="card-text text-muted small">
-                        Tempered glass screen protectors with easy installation. Protect your device.
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="product-price">$14.99</span>
-                        <span class="badge bg-success">In Stock</span>
-                    </div>
-                </div>
-                <div class="card-footer bg-light border-top">
-                    <button class="btn btn-add-cart btn-sm w-100">
-                        <i class="bi bi-cart-plus"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
+            {{-- Create New Product Button --}}
+            <a href="{{ route('products.create') }}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add New Product
+            </a>
         </div>
     </div>
-    
-    {{-- Shop Info Section --}}
-    <div class="row mt-5 pt-5 border-top">
-        <div class="col-md-4 text-center mb-3">
-            <i class="bi bi-percent text-primary" style="font-size: 2rem;"></i>
-            <h5 class="mt-3">Best Prices</h5>
-            <p class="text-muted small">Competitive pricing on all products</p>
-        </div>
-        <div class="col-md-4 text-center mb-3">
-            <i class="bi bi-truck text-success" style="font-size: 2rem;"></i>
-            <h5 class="mt-3">Free Shipping</h5>
-            <p class="text-muted small">On orders over $50</p>
-        </div>
-        <div class="col-md-4 text-center mb-3">
-            <i class="bi bi-arrow-counterclockwise text-warning" style="font-size: 2rem;"></i>
-            <h5 class="mt-3">Easy Returns</h5>
-            <p class="text-muted small">30-day return policy</p>
-        </div>
+
+    {{-- Products Table --}}
+    <div class="table-responsive">
+        <table class="table table-hover">
+            {{-- Table Header --}}
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Description</th>
+                    <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            {{-- Table Body --}}
+            <tbody>
+                @forelse($products as $product)
+                    <tr>
+                        {{-- Product Name --}}
+                        <td class="fw-bold">{{ $product->name }}</td>
+
+                        {{-- Category Name (from eager loaded relationship) --}}
+                        <td>
+                            @if($product->category)
+                                <span class="badge bg-info">{{ $product->category->name }}</span>
+                            @else
+                                <span class="badge bg-secondary">No Category</span>
+                            @endif
+                        </td>
+
+                        {{-- Price formatted as currency --}}
+                        <td class="text-success fw-bold">${{ number_format($product->price, 2) }}</td>
+
+                        {{-- Stock with color indicator --}}
+                        <td>
+                            @if($product->stock > 0)
+                                <span class="badge bg-success">{{ $product->stock }} in stock</span>
+                            @else
+                                <span class="badge bg-danger">Out of stock</span>
+                            @endif
+                        </td>
+
+                        {{-- Description (truncated) --}}
+                        <td class="text-muted small">
+                            @if($product->description)
+                                {{ Str::limit($product->description, 50, '...') }}
+                            @else
+                                <em>No description</em>
+                            @endif
+                        </td>
+
+                        {{-- Action Buttons --}}
+                        <td class="text-center">
+                            <div class="btn-group btn-group-sm" role="group">
+                                {{-- View Details Button --}}
+                                <a href="{{ route('products.show', $product) }}" 
+                                   class="btn btn-outline-primary" 
+                                   title="View Details">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+
+                                {{-- Edit Button --}}
+                                <a href="{{ route('products.edit', $product) }}" 
+                                   class="btn btn-outline-secondary" 
+                                   title="Edit Product">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+
+                                {{-- Add to Cart Button --}}
+                                <form action="{{ route('cart.add', $product) }}" 
+                                      method="POST" 
+                                      style="display: inline;">
+                                    @csrf
+                                    <button type="submit" 
+                                            class="btn btn-outline-success" 
+                                            title="Add to Cart"
+                                            @disabled($product->stock <= 0)>
+                                        <i class="bi bi-cart-plus"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                @empty
+                    {{-- Empty State Message --}}
+                    <tr>
+                        <td colspan="6" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox"></i>
+                            <p class="mt-2">No products available. <a href="{{ route('products.create') }}">Create one now!</a></p>
+                        </td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
+
+    {{-- Pagination Links --}}
+    <div class="d-flex justify-content-center mt-4">
+        {{ $products->links() }}
     </div>
 @endsection

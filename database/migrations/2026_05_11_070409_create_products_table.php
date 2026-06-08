@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            // Foreign key: Reference to product_categories
+            $table->foreignId('product_category_id')->constrained('product_categories')->onDelete('cascade');
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable(); // Made nullable per requirements
             $table->decimal('price', 10, 2);
             $table->unsignedInteger('stock')->default(0);
             $table->timestamps();
