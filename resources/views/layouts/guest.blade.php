@@ -26,27 +26,31 @@
             }
             main {
                 flex: 1;
-                padding: 2rem 0;
+            }
+            .auth-container {
+                max-width: 450px;
+                margin: 3rem auto;
+            }
+            .auth-card {
+                border: none;
+                border-radius: 0.5rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
             }
         </style>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-light">
         <!-- Navigation -->
         <x-navbar />
 
-        <!-- Page Heading -->
-        @isset($header)
-            <header class="bg-light border-bottom">
-                <div class="container py-4">
-                    {{ $header }}
-                </div>
-            </header>
-        @endisset
-
         <!-- Page Content -->
-        <main class="container">
-            @yield('content', '')
-            {{ $slot ?? '' }}
+        <main>
+            <div class="auth-container px-3 px-md-0">
+                <div class="card auth-card">
+                    <div class="card-body p-4 p-md-5">
+                        {{ $slot }}
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->

@@ -38,6 +38,48 @@
                         <i class="bi bi-cart"></i> Cart
                     </a>
                 </li>
+
+                <!-- Authentication Links -->
+                @auth
+                    <!-- User Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i> {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                                    <i class="bi bi-person"></i> Profile
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item" style="border: none; background: none; cursor: pointer;">
+                                        <i class="bi bi-box-arrow-right"></i> Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @else
+                    <!-- Login Link -->
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('login') ? 'active' : '' }}" 
+                           href="{{ route('login') }}">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
+
+                    <!-- Register Link -->
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('register') ? 'active' : '' }}" 
+                           href="{{ route('register') }}">
+                            <i class="bi bi-person-plus"></i> Register
+                        </a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>
